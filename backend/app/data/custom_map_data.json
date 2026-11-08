@@ -1,0 +1,23 @@
+{
+  "mode": "custom",
+  "campus_name": "SDMCET Dharwad Blueprint (Custom Mode)",
+  "center": {
+    "lat": 450,
+    "lng": 500
+  },
+  "zoom": 0,
+  "custom_map_image_url": "/api/map/image/default",
+  "custom_map_bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      900,
+      1000
+    ]
+  ],
+  "walking_speed_mps": 1.35,
+  "nodes": [],
+  "edges": []
+}

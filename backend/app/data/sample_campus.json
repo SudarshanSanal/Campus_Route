@@ -1,0 +1,172 @@
+{
+  "mode": "real",
+  "campus_name": "SDM College of Engineering and Technology, Dharwad (SDMCET)",
+  "center": {
+    "lat": 15.43064,
+    "lng": 75.01464
+  },
+  "zoom": 17,
+  "custom_map_image_url": null,
+  "custom_map_bounds": [
+    [
+      0,
+      0
+    ],
+    [
+      800,
+      1000
+    ]
+  ],
+  "walking_speed_mps": 1.35,
+  "nodes": [
+    {
+      "id": "A",
+      "name": "Front Gate",
+      "category": "entrance",
+      "lat": 15.431308,
+      "lng": 75.012613,
+      "x": 0.0,
+      "y": 0.0,
+      "description": "",
+      "floor_info": "Ground Floor",
+      "icon": "building"
+    },
+    {
+      "id": "B",
+      "name": "Library",
+      "category": "amenity",
+      "lat": 15.429893,
+      "lng": 75.01402,
+      "x": 0.0,
+      "y": 0.0,
+      "description": "",
+      "floor_info": "Floor 1",
+      "icon": "building"
+    },
+    {
+      "id": "C",
+      "name": "Indoor Sports",
+      "category": "facility",
+      "lat": 15.429111,
+      "lng": 75.013831,
+      "x": 0.0,
+      "y": 0.0,
+      "description": "",
+      "floor_info": "Ground Floor",
+      "icon": "building"
+    },
+    {
+      "id": "D",
+      "name": "CSE",
+      "category": "administrative",
+      "lat": 15.430639,
+      "lng": 75.014515,
+      "x": 0.0,
+      "y": 0.0,
+      "description": "",
+      "floor_info": "Ground Floor",
+      "icon": "building"
+    },
+    {
+      "id": "E",
+      "name": "ISE",
+      "category": "administrative",
+      "lat": 15.430928,
+      "lng": 75.013761,
+      "x": 0.0,
+      "y": 0.0,
+      "description": "",
+      "floor_info": "Ground Floor",
+      "icon": "building"
+    },
+    {
+      "id": "F",
+      "name": "PE dept",
+      "category": "facility",
+      "lat": 15.430204,
+      "lng": 75.014414,
+      "x": 0.0,
+      "y": 0.0,
+      "description": "",
+      "floor_info": "Ground Floor",
+      "icon": "building"
+    },
+    {
+      "id": "H",
+      "name": "Back Gate",
+      "category": "parking",
+      "lat": 15.429793,
+      "lng": 75.016687,
+      "x": 0.0,
+      "y": 0.0,
+      "description": "",
+      "floor_info": "Ground Floor",
+      "icon": "building"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e_B_C_5332",
+      "source": "B",
+      "target": "C",
+      "distance": 98.0,
+      "is_bidirectional": true,
+      "path_type": "paved_walkway",
+      "waypoints": null
+    },
+    {
+      "id": "e_A_E_8168",
+      "source": "A",
+      "target": "E",
+      "distance": 150.0,
+      "is_bidirectional": true,
+      "path_type": "paved_walkway",
+      "waypoints": null
+    },
+    {
+      "id": "e_E_D_3759",
+      "source": "E",
+      "target": "D",
+      "distance": 105.0,
+      "is_bidirectional": true,
+      "path_type": "paved_walkway",
+      "waypoints": null
+    },
+    {
+      "id": "e_B_C_6864",
+      "source": "B",
+      "target": "C",
+      "distance": 95.0,
+      "is_bidirectional": true,
+      "path_type": "paved_walkway",
+      "waypoints": null
+    },
+    {
+      "id": "e_D_H_9924",
+      "source": "D",
+      "target": "H",
+      "distance": 289.0,
+      "is_bidirectional": true,
+      "path_type": "paved_walkway",
+      "waypoints": null
+    },
+    {
+      "id": "e_E_F_2894",
+      "source": "E",
+      "target": "F",
+      "distance": 120.0,
+      "is_bidirectional": true,
+      "path_type": "paved_walkway",
+      "waypoints": null
+    },
+    {
+      "id": "e_E_B_4211",
+      "source": "E",
+      "target": "B",
+      "distance": 120.0,
+      "is_bidirectional": true,
+      "path_type": "paved_walkway",
+      "waypoints": null
+    }
+  ]
+}
