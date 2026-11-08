@@ -28,6 +28,11 @@ REAL_CAMPUS_FILE = os.path.join(DATA_DIR, "sample_campus.json")
 CUSTOM_CAMPUS_FILE = os.path.join(DATA_DIR, "custom_map_data.json")
 DEFAULT_SVG_FILE = os.path.join(DATA_DIR, "default_campus_blueprint.svg")
 
+# Frontend build output (served in production)
+FRONTEND_DIST = os.path.abspath(
+    os.path.join(BASE_DIR, "..", "..", "frontend", "dist")
+)
+
 # Managers for both modes
 real_manager = CampusGraphManager(REAL_CAMPUS_FILE)
 custom_manager = CampusGraphManager(CUSTOM_CAMPUS_FILE)
@@ -58,6 +63,10 @@ app.add_middleware(
 
 @app.get("/")
 def root():
+    # In production, serve the React frontend from the built dist folder
+    index = os.path.join(FRONTEND_DIST, "index.html")
+    if os.path.isfile(index):
+        return FileResponse(index)
     return {
         "project": "AI Campus Route Finder",
         "status": "operational",
@@ -264,10 +273,6 @@ def persist_map(mode: Optional[str] = Query(None)):
 # ---------------------------------------------------------------------------
 # Serve React frontend (production build) — used in production / Render
 # ---------------------------------------------------------------------------
-FRONTEND_DIST = os.path.abspath(
-    os.path.join(BASE_DIR, "..", "..", "frontend", "dist")
-)
-
 if os.path.isdir(FRONTEND_DIST):
     app.mount(
         "/assets",
