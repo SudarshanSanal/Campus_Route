@@ -8,6 +8,10 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  // Output the production build where FastAPI can serve it
+  build: {
+    outDir: 'dist',
+  },
   server: {
     port: 5173,
     proxy: {

@@ -260,3 +260,22 @@ def persist_map(mode: Optional[str] = Query(None)):
     mgr = get_active_manager(mode)
     mgr.save_to_json()
     return {"message": "Campus graph data persisted successfully."}
+
+# ---------------------------------------------------------------------------
+# Serve React frontend (production build) — used in production / Render
+# ---------------------------------------------------------------------------
+FRONTEND_DIST = os.path.abspath(
+    os.path.join(BASE_DIR, "..", "..", "frontend", "dist")
+)
+
+if os.path.isdir(FRONTEND_DIST):
+    app.mount(
+        "/assets",
+        StaticFiles(directory=os.path.join(FRONTEND_DIST, "assets")),
+        name="assets",
+    )
+
+    @app.get("/{full_path:path}", include_in_schema=False)
+    def serve_frontend(full_path: str):
+        index = os.path.join(FRONTEND_DIST, "index.html")
+        return FileResponse(index)
